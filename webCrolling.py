@@ -635,8 +635,14 @@ def main():
     finally:
         if driver:
             logger.info("브라우저 종료 중...")
-            driver.quit()
-            logger.info("브라우저가 종료되었습니다.")
+            try:
+                driver.quit()
+                logger.info("브라우저가 종료되었습니다.")
+            except Exception as e:
+                logger.info("브라우저 종료 중 오류 발생: {e}")
+            finally:
+                driver = None
+                
 
 if __name__ == "__main__":
     main()
