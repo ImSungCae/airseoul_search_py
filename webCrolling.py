@@ -320,7 +320,7 @@ def change_next_date(driver):
             driver.execute_script("document.getElementById('goItinerary').click();")
         
         # 결과 로딩 기다리기
-        random_delay(2, 4)
+        random_delay(4, 5)
         
         # CloudFlare 챌린지 확인
         handle_cloudflare_challenge(driver)
