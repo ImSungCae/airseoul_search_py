@@ -15,6 +15,7 @@ import ssl
 from selenium_stealth import stealth
 import undetected_chromedriver as uc
 from datetime import datetime
+import os
 
 # 로깅 설정
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
